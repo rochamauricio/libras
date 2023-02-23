@@ -9,24 +9,40 @@
 <body>
     <img id="imgTeste" src="imagens/alfabeto/1.jpg">
     <br>
-    <button id="exemplo">Click</button>    
+    <br>
+    <button id="anterior">Anterior</button>    
+    <button id="proximo">Próximo</button>    
+    <br>
+    <br>
+    <br>
 
     <script>
-        var botao = document.getElementById('exemplo');
+        var botaoProximo = document.getElementById('proximo');
+        var botaoAnterior = document.getElementById('anterior');
         var imgTeste = document.getElementById('imgTeste');
-        var i = 2;
+        var i = 1;
         var path="imagens/alfabeto/";
 
-        function trocaImagem() {
-            var caminhoArquivo = path + i + ".jpg";
-            imgTeste.src = caminhoArquivo;
-            console.log(caminhoArquivo);
+        function proxima() {
             i += 1;
             if (i == 28)
                 i = 1;
+            var caminhoArquivo = path + i + ".jpg";
+            imgTeste.src = caminhoArquivo;
+            console.log(caminhoArquivo);
         }
 
-        botao.addEventListener('click', trocaImagem);
+        function anterior() {
+            i -= 1;
+            if (i == 0)
+                i = 7;
+            var caminhoArquivo = path + i + ".jpg";
+            imgTeste.src = caminhoArquivo;
+            console.log(caminhoArquivo);
+        }        
+
+        botaoProximo.addEventListener('click', proxima);
+        botaoAnterior.addEventListener('click', anterior);
     </script>
 
 </body>
