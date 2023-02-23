@@ -1,0 +1,17 @@
+img {
+    height: 500px;
+}
+
+#imagemBox {
+    border: 1px #cccccc solid;
+    padding: 0;    
+    text-align: center;
+    display:inline-block;
+    margin-bottom: 30px;
+}
+
+#legendaTeste {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
