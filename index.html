@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Dicionário Gaúcho de Libras</title>
+</head>
+<body>
+    <img id="imgTeste" src="imagens/alfabeto/1.jpg">
+    <br>
+    <button id="exemplo">Click</button>    
+
+    <script>
+        var botao = document.getElementById('exemplo');
+        var imgTeste = document.getElementById('imgTeste');
+        var i = 2;
+        var path="imagens/alfabeto/";
+
+        function trocaImagem() {
+            var caminhoArquivo = path + i + ".jpg";
+            imgTeste.src = caminhoArquivo;
+            console.log(caminhoArquivo);
+            i += 1;
+            if (i == 28)
+                i = 1;
+        }
+
+        botao.addEventListener('click', trocaImagem);
+    </script>
+
+</body>
+</html>
