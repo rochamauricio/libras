@@ -1,2 +1,2 @@
-# mini-dicio-libras
-Mini Dicionário Gaúcho de Libras
+# Mini Dicionário de Libras
+
