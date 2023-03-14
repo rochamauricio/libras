@@ -1,17 +1,21 @@
+.label-pesquisa-achou {
+    display: block;
+    color: black;
+}
+
+.label-pesquisa-nao-achou {
+    display: block;
+    color: red;
+}
+
 img {
-    height: 500px;
+    max-height: 100%; 
+    max-width: 100%;
 }
 
-#imagemBox {
-    border: 1px #cccccc solid;
-    padding: 0;    
-    text-align: center;
-    display:inline-block;
-    margin-bottom: 30px;
-}
-
-#legendaTeste {
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bold;
-}
+@media only screen and (min-width: 992px) {
+    img {
+      min-height: 440px;
+      height: 440px;
+    }
+  }

@@ -5,51 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <title>Mini Dicionário Gaúcho de Libras</title>
 </head>
-<body>
+<body class="bg-light">
     
-    <label for="opcoes">Escolha uma opção</label>
-    <select name="opcoes" id="opcoes">
-        <option value="alfabeto" default>Letra do Alfabeto</option>
-        <option value="numero">Números</option>
-        <option value="a">A</option>
-        <option value="b">B</option>
-        <option value="c">C</option>
-        <option value="d">D</option>
-        <option value="e">E</option>
-        <option value="f">F</option>
-        <option value="g">G</option>
-        <option value="h">H</option>
-        <option value="i">I</option>
-        <option value="j">J</option>
-        <option value="l">L</option>
-        <option value="m">M</option>
-        <option value="n">N</option>
-        <option value="o">O</option>
-        <option value="p">P</option>
-        <option value="q">Q</option>
-        <option value="r">R</option>
-        <option value="s">S</option>
-        <option value="t">T</option>
-        <option value="u">U</option>
-        <option value="v">V</option>
-        <option value="x">X</option>
-        <option value="z">Z</option>
-    </select>
+    <div class="container-fluid">
 
-    <h1 id="titulo"></h1>
+        <div class="row justify-content-md-center mb-3">
+            <div class="col-12 col-xl-6 justify-content-md-center text-center">
+                <h1 class="h1 mt-2 mb-3" id="titulo"></h1>
+            </div>
+        </div>
 
-    <button id="anterior">Anterior</button>    
-    <button id="proximo">Próximo</button>   
-    <br>
-    <br>    
+        <div class="row justify-content-md-center mb-3">
+            <div class="col-12 col-md-6 col-xl-4 justify-content-md-center text-center">
 
-    <div id="imagemBox">
-        <img id="imgTeste" src="imagens/alfabeto/1.jpg">
-        <div id="legendaTeste">A</div>
-    </div>
+                <h1 class="h1 mt-2 mb-3" id="titulo"></h1>
 
+                <select class="form-select" name="opcoes" id="opcoes">
+                    <option value="alfabeto" default>Letra do Alfabeto</option>
+                    <option value="pesquisar">Pesquisar uma palavra</option>
+                    <option value="numero">Números</option>
+                    <option value="animais">Animais</option>
+                    <option value="diasSemana">Dias da semana</option>
+                    <option value="meses">Meses do Ano</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                    <option value="e">E</option>
+                    <option value="f">F</option>
+                    <option value="g">G</option>
+                    <option value="h">H</option>
+                    <option value="i">I</option>
+                    <option value="j">J</option>
+                    <option value="l">L</option>
+                    <option value="m">M</option>
+                    <option value="n">N</option>
+                    <option value="o">O</option>
+                    <option value="p">P</option>
+                    <option value="q">Q</option>
+                    <option value="r">R</option>
+                    <option value="s">S</option>
+                    <option value="t">T</option>
+                    <option value="u">U</option>
+                    <option value="v">V</option>
+                    <option value="x">X</option>
+                    <option value="z">Z</option>
+                </select>                
+
+                <input type="text" class="form-control my-3" placeholder="Digite a sua pesquisa" id="texto-pesquisa">
+                
+                <span id="label-pesquisa"></span>                
+            </div>
+
+            <div class="col-12 my-3 text-center">                
+                <button class="btn btn-primary me-4" id="anterior">Anterior</button>    
+                <button class="btn btn-primary" id="proximo">Próximo</button>   
+            </div>               
+        </div>        
+
+        <div class="row justify-content-md-center">
+            <div class="col-12 text-center">      
+                <img id="imagemSinal" src="imagens/alfabeto/1.jpg">
+                <div class="h2 my-2 w-100" id="legenda"></div>
+                <div class="h5 text-muted w-100" id="descricao"></div>
+            </div>
+        </div>        
+
+    </div>    
+
+    <script src="scripts/categorias.js"></script>
     <script src="scripts/dicionario.js"></script>
     <script src="scripts/scripts.js"></script>
 </body>
