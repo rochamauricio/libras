@@ -19,10 +19,9 @@ function filtrar() {
         titulo.innerHTML = "Números";
     else if (opcao.value == "alfabeto")
         titulo.innerHTML = "Letras do Alfabeto";
-    else if (opcao.value == "a")
-        titulo.innerHTML = "Palávras com A";       
-    else if (opcao.value == "b")
-        titulo.innerHTML = "Palávras com B";    
+    else 
+        titulo.innerHTML = "Palávras com " + opcao.value.toUpperCase();       
+
 }
 
 function exibirSinal(posicaoLista) {
@@ -41,7 +40,7 @@ function proxima() {
 
 function anterior() {
     posicaoLista -= 1;
-    if (posicaoLista <= 0)
+    if (posicaoLista < 0)
         posicaoLista = listaFiltrada.length - 1;
     exibirSinal(posicaoLista);
 }  
