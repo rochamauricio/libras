@@ -13,8 +13,14 @@ var posicaoLista = 0;
 filtrar();
 
 function filtrar() {
-    if (opcao.value == "pesquisar") {
+    if (opcao.value.length == 1) {
+        titulo.innerHTML = "Palávras iniciadas com " + opcao.value.toUpperCase();
+        listaFiltrada = dicionario.filter(item => item.palavra.toUpperCase().startsWith(opcao.value.toUpperCase()) == true);
+    }
+    else if (opcao.value == categorias.pesquisar.nome) {
+        titulo.innerHTML = categorias[opcao.value].titulo;
         txtPesquisa.style.display = 'inline-block';
+        txtPesquisa.focus();
         
         if (txtPesquisa.value != "") {
             labelPesquisa.style.display = "inline-block";
@@ -22,7 +28,7 @@ function filtrar() {
         }
         else {
             labelPesquisa.style.display = "none";
-            listaFiltrada = dicionario.filter(item => item.tipo == "alfabeto");         
+            listaFiltrada = dicionario.filter(item => item.categoria == categorias.alfabeto.nome);         
         }
          
         if (listaFiltrada.length == 0) {
@@ -36,35 +42,17 @@ function filtrar() {
         }
     } 
     else {
+        titulo.innerHTML = categorias[opcao.value].titulo;
         labelPesquisa.innerHTML = "";
         labelPesquisa.classList.remove("label-pesquisa-achou");
         labelPesquisa.classList.remove("label-pesquisa-nao-achou");
-            
         txtPesquisa.style.display = 'none';
         txtPesquisa.value = "";
-        if (opcao.value == "animais" || opcao.value == "diasSemana" || opcao.value == "meses")
-            listaFiltrada = dicionario.filter(item => item.categoria == opcao.value);
-        else
-            listaFiltrada = dicionario.filter(item => item.tipo == opcao.value);
+        listaFiltrada = dicionario.filter(item => item.categoria == categorias[opcao.value].nome);
     }
     
     posicaoLista = 0;    
     exibirSinal(0);
-
-    if (opcao.value == "pesquisar")
-        titulo.innerHTML = "Pesquisar uma palavra";
-    else if (opcao.value == "numero")
-        titulo.innerHTML = "Números";
-    else if (opcao.value == "alfabeto")
-        titulo.innerHTML = "Letras do Alfabeto";
-    else if (opcao.value == "animais")
-        titulo.innerHTML = "Animais";        
-    else if (opcao.value == "diasSemana")
-        titulo.innerHTML = "Dias da Semana";    
-    else if (opcao.value == "meses")
-        titulo.innerHTML = "Meses do Ano";               
-    else 
-        titulo.innerHTML = "Palávras com " + opcao.value.toUpperCase();       
 }
 
 function exibirSinal(posicaoLista) {
