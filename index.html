@@ -12,18 +12,12 @@
     
     <div class="container-fluid">
 
-        <div class="row justify-content-md-center mb-3">
-            <div class="col-12 col-xl-6 justify-content-md-center text-center">
-                <h1 class="h1 mt-2 mb-3" id="titulo"></h1>
-            </div>
-        </div>
-
-        <div class="row justify-content-md-center mb-3">
+        <div class="row justify-content-md-center">
             <div class="col-12 col-md-6 col-xl-4 justify-content-md-center text-center">
 
-                <h1 class="h1 mt-2 mb-3" id="titulo"></h1>
+                <h1 class="h1 mt-2 mb-2 mb-sm-2  mb-md-4" id="titulo"></h1>
 
-                <select class="form-select" name="opcoes" id="opcoes">
+                <select class="form-select mb-2 mb-sm-2  mb-md-4" name="opcoes" id="opcoes">
                     <option value="pesquisar">Pesquisar uma palavra</option>
                     <optgroup label="Categorias">
                         <option value="alfabeto" selected>Letras do Alfabeto</option>
@@ -67,12 +61,11 @@
                     </optgroup>
                 </select>                
 
-                <input type="text" class="form-control my-3" placeholder="Digite a sua pesquisa" id="texto-pesquisa">
-                
+                <input type="text" class="form-control mb-2 mb-sm-2  mb-md-4" placeholder="Digite a sua pesquisa" id="texto-pesquisa">
                 <span id="label-pesquisa"></span>                
             </div>
 
-            <div class="col-12 my-3 text-center">                
+            <div class="col-12 mb-2 mb-sm-2  mb-md-4 text-center">                
                 <button class="btn btn-primary me-4" id="anterior">Anterior</button>    
                 <button class="btn btn-primary" id="proximo">Próximo</button>   
             </div>               
@@ -80,7 +73,7 @@
 
         <div class="row justify-content-md-center">
             <div class="col-12 text-center">      
-                <img id="imagemSinal" src="imagens/alfabeto/1.jpg">
+                <img id="imagemSinal" class="border shadow" src="imagens/alfabeto/1.jpg">
                 <div class="h2 my-2 w-100" id="legenda"></div>
                 <div class="h5 text-muted w-100" id="descricao"></div>
             </div>

@@ -1,16 +1,3 @@
-const categoria = {
-    animais: "animais",
-    frutas: "frutas",
-    cores: "cores",
-    diasSemana: "diasSemana",
-    meses: "meses",
-    familia: "familia",
-    profissoes: "profissoes",
-    transportes: "transportes",
-    esportes: "esportes",
-    disciplinas: "disciplinas"
-};
-
 const categorias = {
     pesquisar:      { nome: "pesquisar",        titulo: "Pesquisar uma palavra" },
     numeros:        { nome: "numeros",          titulo: "Números" },
