@@ -13,4 +13,6 @@ const categorias = {
     pontosCardeais: { nome: "pontosCardeais",   titulo: "Pontos Cardeais" },
     esportes:       { nome: "esportes",         titulo: "Esportes" },
     disciplinas:    { nome: "disciplinas",      titulo: "Disciplinas" },
+    pronomes:       { nome: "pronomes",         titulo: "Pronomes" },
+    verbosDirec:    { nome: "verbosDirec",      titulo: "Verbos Direcionais" },    
 };
