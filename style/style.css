@@ -23,6 +23,6 @@ img {
 @media only screen and (max-width: 576px) {
     img {
       min-height: auto;
-      max-height: 350px;
+      max-height: 320px;
     }
   }  
